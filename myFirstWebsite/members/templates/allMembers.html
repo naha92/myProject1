@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block title %}
+  The Code Crusaders Members
+{% endblock %}
+
+
+{% block content %}
+
+
+
+  <h1>Members</h1>
+  <p>
+    {% for x in mymembers %}
+        {% if x.id == 2 %}
+            <a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a>
+        {% endif %}
+    {% endfor %}
+  </p>
+  
+  <ul>
+    {% for x in mymembers %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
