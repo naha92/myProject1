@@ -36,3 +36,15 @@ def testing(request):
 def about(request):
   template = loader.get_template('about.html')
   return HttpResponse(template.render())
+
+def team(request):
+  template = loader.get_template('team.html')
+  return HttpResponse(template.render())
+
+def projects(request):
+  template = loader.get_template('projects.html')
+  return HttpResponse(template.render())
+
+def contact(request):
+  template = loader.get_template('contact.html')
+  return HttpResponse(template.render())
